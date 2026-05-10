@@ -5,7 +5,7 @@ const projects = [
     title: 'Nordic Space',
     description: 'Ultra-clean monochromatic showcase for design studios. Extensive white space with staggered reveal animations.',
     stack: 'React · Vite · Framer Motion',
-    href: '#',
+    href: 'https://metrocebu-portis-nordic.vercel.app/',
   },
   {
     number: '02',
@@ -13,7 +13,7 @@ const projects = [
     title: 'Clarity',
     description: 'High-utility analytics platform. Sharp borders, monospace data labels, single-color grayscale charts.',
     stack: 'Next.js · Recharts · TypeScript',
-    href: '#',
+    href: 'https://metrocebu-portis-clarity.vercel.app/',
   },
   {
     number: '03',
@@ -21,7 +21,7 @@ const projects = [
     title: 'Canvas',
     description: 'Magazine-style landing page. Bold typography, large-scale imagery, multi-column print-like layouts.',
     stack: 'React · Vite · Tailwind CSS',
-    href: '#',
+    href: 'https://metrocebu-portis-canvas.vercel.app/',
   },
 ]
 
