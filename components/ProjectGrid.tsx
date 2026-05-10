@@ -6,6 +6,7 @@ const projects = [
     description: 'Ultra-clean monochromatic showcase for design studios. Extensive white space with staggered reveal animations.',
     stack: 'React · Vite · Framer Motion',
     href: 'https://metrocebu-portis-nordic.vercel.app/',
+    image: '/ss-nordic.png',
   },
   {
     number: '02',
@@ -14,6 +15,7 @@ const projects = [
     description: 'High-utility analytics platform. Sharp borders, monospace data labels, single-color grayscale charts.',
     stack: 'Next.js · Recharts · TypeScript',
     href: 'https://metrocebu-portis-clarity.vercel.app/',
+    image: '/ss-clarity.png',
   },
   {
     number: '03',
@@ -22,6 +24,7 @@ const projects = [
     description: 'Magazine-style landing page. Bold typography, large-scale imagery, multi-column print-like layouts.',
     stack: 'React · Vite · Tailwind CSS',
     href: 'https://metrocebu-portis-canvas.vercel.app/',
+    image: '/ss-canvas.png',
   },
 ]
 
@@ -36,18 +39,27 @@ export default function ProjectGrid() {
           <a
             key={p.number}
             href={p.href}
-            className={`group flex flex-col gap-5 p-8 border border-border hover:border-foreground transition-all duration-200 ${
+            className={`group flex flex-col gap-5 border border-border hover:border-foreground transition-all duration-200 ${
               i < 2 ? 'md:border-r-0' : ''
             }`}
           >
-            <span className="font-mono text-xs text-muted">
-              {p.number} / {p.tag}
-            </span>
-            <h2 className="text-lg font-semibold tracking-tight text-foreground">
-              {p.title}
-            </h2>
-            <p className="text-sm text-muted leading-relaxed flex-1">{p.description}</p>
-            <span className="font-mono text-xs text-muted">{p.stack}</span>
+            <div className="overflow-hidden aspect-[16/10]">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+              />
+            </div>
+            <div className="flex flex-col gap-3 p-6">
+              <span className="font-mono text-xs text-muted">
+                {p.number} / {p.tag}
+              </span>
+              <h2 className="text-lg font-semibold tracking-tight text-foreground">
+                {p.title}
+              </h2>
+              <p className="text-sm text-muted leading-relaxed flex-1">{p.description}</p>
+              <span className="font-mono text-xs text-muted">{p.stack}</span>
+            </div>
           </a>
         ))}
       </div>
